@@ -6,6 +6,8 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 import org.springframework.stereotype.Component;
 
+import javax.validation.constraints.NotNull;
+
 @Component
 @Builder
 @Data
@@ -13,6 +15,12 @@ import org.springframework.stereotype.Component;
 @NoArgsConstructor
 public class Goods {
     private int Id;
-    private String GoodName;
-    private String Desc;
+    @NotNull
+    private String goodName;
+    @NotNull
+    private int price;
+    @NotNull
+    private String unit;
+    @NotNull
+    private String src;
 }
